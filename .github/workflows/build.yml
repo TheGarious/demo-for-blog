@@ -8,7 +8,7 @@ jobs:
     steps:
     - name: Travis CI
       uses: travis-ci/actions@master
-      secrets = [
+      secrets : [
         ${{ secrets.SECRET_TRAVIS_CI }}
       ]
       
