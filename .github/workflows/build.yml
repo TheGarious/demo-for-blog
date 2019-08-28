@@ -1,11 +1,12 @@
-workflow "Build and Test Time" {
-  on = "push"
-  resolves = ["Test on Travis CI"]
-}
+name: CI Travis Test
 
-action "Test on Travis CI" {
-  uses = "travis-ci/actions@master"
-  secrets = [
-    "SECRET_TRAVIS_CI",
-  ]
-}
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Travis CI
+      uses: travis-ci/actions@master
+      with:
+        TRAVIS_TOKEN: ${{ secrets.SECRET_TRAVIS_CI }}
