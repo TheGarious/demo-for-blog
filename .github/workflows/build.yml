@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: My first action
-      uses = travis-ci/actions@master
+      uses: travis-ci/actions@master
       env:
         TRAVIS_TOKEN: ${{ secrets.SECRET_TRAVIS_CI }}
