@@ -6,8 +6,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
     - name: Travis CI
       uses: travis-ci/actions@master
-      env:
-         SECRET_TRAVIS_CI : ${{ secrets.SECRET_TRAVIS_CI }}
+      secrets = [
+        ${{ secrets.SECRET_TRAVIS_CI }}
+      ]
+      
