@@ -7,8 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Travis CI
+      resolves: 
       uses: travis-ci/actions@master
-      secrets : [
+      with:
         ${{ secrets.SECRET_TRAVIS_CI }}
-      ]
-      
